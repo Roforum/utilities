@@ -1,4 +1,5 @@
-./jcmd $PID VM.native_memory baseline
+timeval=`date '+Sep%d.%H.%M'`
+./jcmd $PID VM.native_memory baseline  > NativeMemoryReport.$timeval.Baseline.txt
 while test 1
 do
  timeval=`date '+Sep%d.%H.%M'`
