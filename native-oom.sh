@@ -1,6 +1,7 @@
+./jcmd $PID VM.native_memory baseline
 while test 1
 do
- timeval=`date '+Jun%d.%H.%M'`
+ timeval=`date '+Sep%d.%H.%M'`
 ./jcmd $PID VM.native_memory summary > NativeMemoryReport.$timeval.Summary.txt
 ./jcmd $PID VM.native_memory summary.diff > NativeMemoryReport.$timeval.Summary.diff.txt
 ./jcmd $PID VM.native_memory detail > NativeMemoryReport.$timeval.Detail.txt
